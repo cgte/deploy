@@ -41,8 +41,8 @@ fi
 source ./functions.sh
 check_import
 
-echo $distro_like
-echo $arch_like
+echo dis "$distro_like"
+echo arch "$arch_like"
 
 
 if [ "$distro_like" == "$arch_like" ];
