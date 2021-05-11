@@ -28,6 +28,8 @@ distro_like=$(echo "$distro_like_line" | cut -d= -f 2) # xxx=my_base ~> my_base
 
 source ./functions.sh
 
+
+
 echo "your seems to be based on $distro_like"
 
 sudo id > /dev/null && sudo_ok=1 || sudo_ok=0
@@ -41,5 +43,7 @@ fi
 
 if [[ "$distro_like" == "$arch_like" ]];
     then
+        update_arch
         install_arch
+        activate_arch
 fi
