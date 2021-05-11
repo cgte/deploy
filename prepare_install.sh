@@ -1,3 +1,4 @@
+set -x
 echo "Hello world"
 
 os_info="/etc/os-release" # Contains info about your distro eg arch or debian based
