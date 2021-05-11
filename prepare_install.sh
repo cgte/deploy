@@ -1,4 +1,3 @@
-set -x
 echo "Hello world"
 
 os_info="/etc/os-release" # Contains info about your distro eg arch or debian based
@@ -41,11 +40,12 @@ fi
 source ./functions.sh
 check_import
 
+set -x
 echo dis "$distro_like"
 echo arch "$arch_like"
 
 
-if [ "$distro_like" == $arch_like ];
+if [ $distro_like = "$arch_like" ];
 then
     echo "Processing for arch"
     update_arch
