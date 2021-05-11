@@ -26,9 +26,6 @@ fi
 
 distro_like=$(echo "$distro_like_line" | cut -d= -f 2) # xxx=my_base ~> my_base
 
-source ./functions.sh
-
-
 
 echo "your seems to be based on $distro_like"
 
@@ -40,6 +37,10 @@ then
 else
     echo "sudoing ok"
 fi
+
+source ./functions.sh
+check_import
+
 
 if [[ "$distro_like" == "$arch_like" ]];
 then
