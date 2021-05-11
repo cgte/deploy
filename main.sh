@@ -1,5 +1,3 @@
-set -e
-set -x
 
 prefix="https://raw.githubusercontent.com/cgte/deploy/main"
 
