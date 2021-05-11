@@ -2,7 +2,7 @@ echo "Hello world"
 
 os_info="/etc/os-release" # Contains info about your distro eg arch or debian based
 
-arch_like="arch"
+arch_like='"arch"' #some sh comparing string issues for me
 
 
 echo "fetching info for $os_info"
@@ -45,7 +45,7 @@ echo dis "$distro_like"
 echo arch "$arch_like"
 
 
-if [ $distro_like = "$arch_like" ];
+if [ "$distro_like" = "$arch_like" ];
 then
     echo "Processing for arch"
     update_arch
