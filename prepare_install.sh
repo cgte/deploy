@@ -42,7 +42,7 @@ source ./functions.sh
 check_import
 
 echo $distro_like
-echo $arch_lke
+echo $arch_like
 
 
 if [[ "$distro_like" == "$arch_like" ]];
