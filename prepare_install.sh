@@ -49,4 +49,6 @@ then
         install_arch
         activate_arch
         print_ip
+else
+    echo "no work"
 fi
