@@ -45,7 +45,7 @@ echo $distro_like
 echo $arch_like
 
 
-if [[ "$distro_like" == "$arch_like" ]];
+if [ "$distro_like" == "$arch_like" ];
 then
     echo "Processing for arch"
     update_arch
