@@ -2,7 +2,7 @@ echo "Hello world"
 
 os_info="/etc/os-release" # Contains info about your distro eg arch or debian based
 
-arch_like="arch"
+arch_like='"arch"' #some sh comparing string issues for me
 
 
 echo "fetching info for $os_info"
@@ -26,7 +26,6 @@ fi
 
 distro_like=$(echo "$distro_like_line" | cut -d= -f 2) # xxx=my_base ~> my_base
 
-
 echo "your seems to be based on $distro_like"
 
 sudo id > /dev/null && sudo_ok=1 || sudo_ok=0
@@ -39,14 +38,13 @@ else
 fi
 
 source ./functions.sh
-check_import
 
-
-if [[ "$distro_like" == "$arch_like" ]];
+if [ "$distro_like" = "$arch_like" ];
 then
-        echo "Processing for arch"
-        update_arch
-        install_arch
-        activate_arch
-        print_ip
+    update_arch
+    install_arch
+    activate_arch
+    print_ip
+else
+    echo "no work"
 fi
