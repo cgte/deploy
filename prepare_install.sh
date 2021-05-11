@@ -41,14 +41,17 @@ fi
 source ./functions.sh
 check_import
 
+echo $distro_like
+echo $arch_lke
+
 
 if [[ "$distro_like" == "$arch_like" ]];
 then
-        echo "Processing for arch"
-        update_arch
-        install_arch
-        activate_arch
-        print_ip
+    echo "Processing for arch"
+    update_arch
+    install_arch
+    activate_arch
+    print_ip
 else
     echo "no work"
 fi
