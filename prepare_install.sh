@@ -38,17 +38,9 @@ else
 fi
 
 source ./functions.sh
-check_import
-
-set -x
-echo dis "$distro_like"
-echo arch "$arch_like"
-
 
 if [ "$distro_like" = "$arch_like" ];
 then
-    echo "Processing for arch"
-    exit 0
     update_arch
     install_arch
     activate_arch
