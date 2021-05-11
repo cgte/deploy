@@ -1,1 +1,1 @@
-watch sh preprare_install.sh
+watch sh prepare_install.sh
