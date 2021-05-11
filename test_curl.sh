@@ -1,0 +1,1 @@
+echo "Auto call worked"
