@@ -26,9 +26,11 @@ fi
 
 distro_like=$(echo "$distro_like_line" | cut -d= -f 2) # xxx=my_base ~> my_base
 
+source ./functions.sh
+
 echo "your seems to be based on $distro_like"
 
 if [[ "$distro_like" == "$arch_like" ]];
     then
-        install_arch()
+        install_arch
 fi
