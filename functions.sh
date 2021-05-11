@@ -1,3 +1,7 @@
+function check_import (){
+    echo "check_import"
+}
+
 function update_arch (){
     echo "update_arch"
     # Make this call optional

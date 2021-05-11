@@ -42,7 +42,8 @@ else
 fi
 
 if [[ "$distro_like" == "$arch_like" ]];
-    then
+then
+        echo "Processing for arch"
         update_arch
         install_arch
         activate_arch
