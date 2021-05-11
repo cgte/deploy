@@ -30,6 +30,15 @@ source ./functions.sh
 
 echo "your seems to be based on $distro_like"
 
+sudo id > /dev/null && sudo_ok=1 || sudo_ok=0
+
+if [[ -z sudo_ok ]];
+then
+    echo "sudo failed exiting"; exit
+else
+    echo "sudoing ok"
+fi
+
 if [[ "$distro_like" == "$arch_like" ]];
     then
         install_arch
