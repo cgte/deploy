@@ -46,4 +46,5 @@ if [[ "$distro_like" == "$arch_like" ]];
         update_arch
         install_arch
         activate_arch
+        print_ip
 fi
